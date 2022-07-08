@@ -10,24 +10,67 @@
       <th colspan="3"></th>
      </tr>
    </thead>
-   <tbody>
+   <tbody>a
+    <tr>
+     <td>コード編集</td>
+     <td>コード編集について</td>
+     <td><a class="show_82760" href=" /books/82760">Show</a></td>
+     <td><a class="edit_82760" href=" /books/82760">Edit</a></td>
+     <td><a class="destroy_82760" href=" /books/82760">Destroy</a></td>
+    </tr>
     <tr>
      <td>リーダブルコード</td>
      <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-     <td><a class="show_82760" href=" /books/82760">Show</a></td>
+     <td><a class="show_82753" href=" /books/82753">Show</a></td>
+     <td><a class="edit_82753" href=" /books/82753">Edit</a></td>
+     <td><a class="destroy_82753" href=" /books/82753">Destroy</a></td>
     </tr>
     <tr>
      <td>たのしいRuby</td>
      <td>Rubyの入門におすすめです</td>
-     <td><a class="show_82761" href=" /books/82760">Edit</a></td>
+     <td><a class="show_82754" href=" /books/82754">Show</a></td>
+     <td><a class="edit_82754" href=" /books/82754">Edit</a></td>
+     <td><a class="destroy_82754" href=" /books/82754">Destroy</a></td>
     </tr>
     <tr>
      <td>入門Git</td>
-     <td>gitについての基本操作から</td>
+     <td>gitについての基本操作から内部構造まで解説してくれます</td>
+     <td><a class="show_82755" href=" /books/82755">Show</a></td>
+     <td><a class="edit_82755" href=" /books/82755">Edit</a></td>
+     <td><a class="destroy_82755" href=" /books/82755">Destroy</a></td>
+    </tr>
+    <tr>
+     <td>アルゴリズム図鑑</td>
+     <td>アルゴリズムについて</td>
+     <td><a class="show_82756" href=" /books/82756">Show</a></td>
+     <td><a class="edit_82756" href=" /books/82756">Edit</a></td>
+     <td><a class="Destroy_82756" href=" /books/82756">Destroy</a></td>
+    </tr>
+    <tr>
+     <td>達人プログラマー</td>
+     <td>プログラマ入門者は必読！</td>
+     <td><a class="show_82758" href=" /books/82758">Show</a></td>
+     <td><a class="edit_82758" href=" /books/82758">Edit</a></td>
+     <td><a class="destroy_82758" href=" /books/82758">Destroy</a></td>
+    </tr>
+    <tr>
+     <td>データベース実践入門</td>
+     <td>効率的なSQL文を教えてくれます</td>
+     <td><a class="show_82759" href=" /books/82759">Show</a></td>
+     <td><a class="edit_82759" href=" /books/82759">Edit</a></td>
+     <td><a class="destroy_82759" href=" /books/82759">Destroy</a></td>
     </tr>
    </tbody>
   </table>
-<h1>Lists#new</h1>
+  
+<%= form_with model: @list, url: '/lists', method: :post do |f| %>
+ <h1>New Book</h1>
+ <h1>Title</h1>
+ <%= f.text_field :title %>
+ <h1>Body</h1>
+ <%= f.text_area :body %>
+ <%= f.submit 'Create Book' %>
+<h2>Homes#Top</h2>
 <p>Find me in app/views/lists/new.html.erb</p>
  </body>
 </html>
