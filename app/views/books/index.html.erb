@@ -39,45 +39,45 @@
       <td>gitについて基本操作から内部構造まで解説してくれます</td>
       <% @show.each do |Show| %>
       <% @edit.each do |Edit| %>
-      <% @destroy each do |Destroy| %
+      <% @destroy each do |Destroy| %>
     </tr>
     <tr>
       <td>アルゴリズム図鑑</td>
       <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
-      <td><a class="show_83784" href=" /books/83784">Show</a></td>
-      <td><a class="edit_83784" href=" /books/83784">Edit</a></td>
-      <td><a class="destroy_83784" href=" /books/83784">Destroy</a></td>
+      <% @show.each do |Show| %>
+      <% @edit.each do |Edit| %>
+      <% @destroy.each do |Destroy| %>
     </tr>
     <tr>
       <td>達人プログラマー</td>
       <td>プログラマ入門者は必読！</td>
-      <td><a class="show_83785" href=" /books/83785">Show</a></td>
-      <td><a class="edit_83785" href=" /books/83785">Edit</a></td>
-      <td><a class="destroy_83785" href=" /books/83785">Destroy</a></td>
+      <% @show.each do |Show| %>
+      <% @edit.each do |Edit| %>
+      <% @destroy.each so |Destroy| %>
     </tr>
     <tr>
       <td>データベース実践入門</td>
       <td>効率的なSQL文を教えてくれます</td>
-      <td><a class="show_83786" href=" /books/83786">Show</a></td>
-      <td><a class="edit_83786" href=" /books/83786">Edit</a></td>
-      <td><a class="destroy_83786" href=" /books/83786">Destroy</a></td>
+      <% @show.each do |Show| %>
+      <% @edit.each do |Edit| %>
+      <% @destroy.each do |Destroy| %>
     </tr>
   </tbody>
 </table>
 
 
 <h2>New book</h2>
-
+<%= form_with model: @list do |f| %>
   <div class="field">
-    
+  <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    
+  <%= f.text_area :body %>
   </div>
 
   <div class="actions">
-   
+  <%= f.submit 'Create Book' %>
   </div>
 </form>
   
