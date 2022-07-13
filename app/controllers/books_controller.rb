@@ -7,6 +7,11 @@ class BooksController < ApplicationController
     @book = Book.new
   end
   
+  def show
+    @shows = Show.all
+    @show = Show.all
+  end
+  
   def create
    book = Book.new(book_params)
    book.save
