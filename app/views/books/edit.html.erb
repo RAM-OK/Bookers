@@ -1,0 +1,15 @@
+<h1>Editing Book</h1>
+ <%= form_with model: @edit do |f| %>
+ <div>
+  <label>Title</label>
+ </div>
+ <%= f.text_field :title %>
+ 
+ <div>
+  <label>Body</label>
+ </div>
+ <%= f.text_field :body %>
+ <div>
+  <%= f.submit "Create Book" %>
+ </div>
+<% end %>

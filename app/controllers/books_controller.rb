@@ -8,10 +8,20 @@ class BooksController < ApplicationController
   end
   
   def show
-    @shows = Show.all
+    @book = Book.find(params[:id])
     @show = Show.all
   end
   
+  def edit
+   @book = Book.find(params[:id])
+   @show = Show.all
+  end
+  
+  def Back
+   @book = Book.find(params[:id])
+   @show = Show.all
+  end
+   
   def create
    book = Book.new(book_params)
    book.save
