@@ -23,10 +23,10 @@
        <span><%= link_to "Show", book_path(book.id)%></span>
      </td>
      <td>
-       <span><%= link_to "Edit", book_path(book.id) %></span>
+       <span><%= link_to "Edit", edit_book_path(@book.id)%></span>
      </td>
      <td>
-       <span><%= link_to "Destroy", book_path(book.id) %></span>
+       <span><%= link_to "Destroy", destroy_book_path(@book.id), delete,"data-confirm" => "Are You Sure?" %></span>
      </td>
    </tr>
    <% end %>
