@@ -23,16 +23,15 @@
        <span><%= link_to "Show", book_path(book.id)%></span>
      </td>
      <td>
-       <span><%= link_to "Edit", edit_book_path(@book.id)%></span>
+       <span><%= link_to "Edit", edit_book_path(book.id)%></span>
      </td>
      <td>
-       <span><%= link_to "Destroy", destroy_book_path(@book.id), delete,"data-confirm" => "Are You Sure?" %></span>
+       <span><%= link_to "Destroy", book_path(book.id), method: :delete,"data-confirm" => "Are You Sure?" %></span>
      </td>
    </tr>
    <% end %>
   </tbody>
 </table>
-
 
 <h2>New book</h2>
  <%= form_with model: @book do |f| %>
