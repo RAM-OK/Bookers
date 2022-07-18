@@ -3,8 +3,8 @@ class ShowsController < ApplicationController
   end
   
   def edit
-   @bookers = Bookers.all
-   @booker = Booker.all
+   @edits = Edits.all
+   @edits = Edit.all
   end
   
   def back
