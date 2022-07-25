@@ -30,8 +30,10 @@ class BooksController < ApplicationController
   def create
    @book = Book.new(book_params)
    if @book.save
+    flash[:notice] = "投稿に成功しました。"
     redirect_to books_path
    else
+    flash[:alret] = "投稿に失敗しました。"
     @books = Book.all
     render :index
    end
