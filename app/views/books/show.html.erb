@@ -1,10 +1,8 @@
-<div class="text-success">
- <%= flash[:notice] %>
-</div>
-<div class="text-danger">
- <%= flash[:alret] %>
-</div>
-
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 <p>Title:<%= @book.title %></p>
 <p>Body:<%= @book.body %></p>
 <span><%= link_to 'Edit', edit_book_path(@book) %></span>
